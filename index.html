@@ -27,12 +27,6 @@ var calc = function(){
 	var sal = document.getElementById("sal").value; // pegamos o valor que digitamos no input
 	var inss = (8/100) * sal; // calculamos o desconto do inss
 	var ir_init = sal - inss; // aqui é o nosso salario já com o desconto do inss
-  //pega valor empresa01;
-  var i = document.getElementById("empresa01");
-  var empresa_val = i.options[i.selectedIndex].value;
-  //pega valor adicional salário;
-  var e = document.getElementById("adicional01");
-  var insa_val = e.options[e.selectedIndex].value;
   //pega valor salário proventos;
   var total_sal = document.getElementById("totalprov01").value;
   var total_Seguro = document.getElementById("totalSeguro01").value;
@@ -57,7 +51,7 @@ var calc = function(){
     document.getElementById("totalSeguro01").value = z.toFixed(2);
 	}
 
-  if(insa_val == 1){
+  if(sal >= 1){
     var y = sal *(100/100);
     document.getElementById("totalprov01").value = y.toFixed(2);
     var to = total_sal
@@ -68,90 +62,6 @@ var calc = function(){
     document.getElementById("totalrecebe01").value = l.toFixed(2);
 
 	}
-
-  if(insa_val == 0.3){
-    var x = (30/100) * sal;
-    var y = sal *(100/100);
-    var z = x + y;
-    document.getElementById("totalprov01").value = z.toFixed(2);
-    var to = total_sal
-    var j = (30/100) * total_sal;
-    document.getElementById("totalajuda01").value = j.toFixed(2);
-    var w = total_Seguro *(100/100);
-    var l = j + w;
-    document.getElementById("totalrecebe01").value = l.toFixed(2);
-
-	}
-
-  if(insa_val == 0.2 && empresa_val == 1045 ){
-    var x = (20/100) * empresa_val;
-    var y = sal *(100/100);
-    var z = x + y;
-    document.getElementById("totalprov01").value = z.toFixed(2);
-    var j = (30/100) * z;
-    document.getElementById("totalajuda01").value = j.toFixed(2);
-    var w = total_Seguro *(100/100);
-    var l = j + w;
-    document.getElementById("totalrecebe01").value = l.toFixed(2);
-
-  }
-  if(insa_val == 0.4 && empresa_val == 1045 ){
-    var x = (40/100) * empresa_val;
-    var y = sal *(100/100);
-    var z = x + y;
-    document.getElementById("totalprov01").value = z.toFixed(2);
-    var j = (30/100) * z;
-    document.getElementById("totalajuda01").value = j.toFixed(2);
-    var w = total_Seguro *(100/100);
-    var l = j + w;
-    document.getElementById("totalrecebe01").value = l.toFixed(2);
-  }
-
-  if(insa_val == 0.2 && empresa_val == 1104.93 ){
-    var x = (20/100) * empresa_val;
-    var y = sal *(100/100);
-    var z = x + y;
-    document.getElementById("totalprov01").value = z.toFixed(2);
-    var j = (30/100) * z;
-    document.getElementById("totalajuda01").value = j.toFixed(2);
-    var w = total_Seguro *(100/100);
-    var l = j + w;
-    document.getElementById("totalrecebe01").value = l.toFixed(2);
-  }
-  if(insa_val == 0.4 && empresa_val == 1104.93 ){
-    var x = (40/100) * empresa_val;
-    var y = sal *(100/100);
-    var z = x + y;
-    document.getElementById("totalprov01").value = z.toFixed(2);
-    var j = (30/100) * z;
-    document.getElementById("totalajuda01").value = j.toFixed(2);
-    var w = total_Seguro *(100/100);
-    var l = j + w;
-    document.getElementById("totalrecebe01").value = l.toFixed(2);
-  }
-
-  if(insa_val == 0.2 && empresa_val == 1068.85 ){
-    var x = (20/100) * empresa_val;
-    var y = sal *(100/100);
-    var z = x + y;
-    document.getElementById("totalprov01").value = z.toFixed(2);
-    var j = (30/100) * z;
-    document.getElementById("totalajuda01").value = j.toFixed(2);
-    var w = total_Seguro *(100/100);
-    var l = j + w;
-    document.getElementById("totalrecebe01").value = l.toFixed(2);
-  }
-  if(insa_val == 0.4 && empresa_val == 1068.85 ){
-    var x = (40/100) * empresa_val;
-    var y = sal *(100/100);
-    var z = x + y;
-    document.getElementById("totalprov01").value = z.toFixed(2);
-    var j = (30/100) * z;
-    document.getElementById("totalajuda01").value = j.toFixed(2);
-    var w = total_Seguro *(100/100);
-    var l = j + w;
-    document.getElementById("totalrecebe01").value = l.toFixed(2);
-  }
 
 };
 
@@ -191,16 +101,15 @@ var calc = function(){
         <h1 class="mb-0">Simulador
           <span class="text-primary">Suspensão</span>
         </h1>
-        <div class="subheading mb-5">SIMULADOR DE SUSPENSÃO DO CONTRATO DE TRABALHO
+        <div class="subheading mb-5">SIMULADOR DE SUSPENSÃO DO CONTRATO DE TRABALHO ·
+          <a href="mailto:teste@emarcopolo.com.br">teste@marcopolo.com.br</a>
         </div>
-        <li  class="lead mb-2"> Informe o seu salário base atual (valor hora X 220) para obter a simulação dos rendimentos líquidos.</li>
-	<!--
+        <li  class="lead mb-2"> Informe seu salário para obter a simulaçao dos rendimentos líquidos.</li>
         <div class="social-icons">
           <a href="#">
             <i class="fab "><img class="img-fluid img-bus mx-auto mb-3" src="img/bus.png" alt=""></i>
           </a>
-        </div>
-        -->
+      </div>
     </section>
 
     <hr class="m-0">
@@ -210,35 +119,29 @@ var calc = function(){
         <h2 class="mb-3">Suspensão</h2>
         <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
           <form onsubmit="calc();">
-          <div class="row">
-            <div class="form-group col-md-4">
-              <Label for="requisitante" >Empresa<span class="fs-color-danger">*</span></Label>
-              <select name="empresa" id="empresa01" title="Escolha a empresa que trabalha" class="form-control">
-                <optgroup label="selecione sua Empresa">
-                  <option value="1045" id="ins1">Marcopolo</option>
-                  <option value="1104.93" id="ins2">Marcopolo Ciferal</option>
-                  <option value="1068.85" id="ins2">Marcopolo São Mateus</option>
-                </optgroup>
-              </select>
+            <div class="row">
+            <div class="form-group col-md-5">
+              <Label for="requisitante" >Salário Atual<span class="fs-color-danger">*</span></Label>
+              <input type="number" title="Informe aqui seu salário base atual" id="sal" class="form-control"/>
             </div>
-            <div class="form-group col-md-4">
-              <Label for="requisitante">Salário Atual<span class="fs-color-danger">*</span></Label>
-              <input type="number"  id="sal" title="Informe aqui seu salário base atual" class="form-control"/>
-            </div>
+
           </div>
           <div class="row">
             <div class="form-group col-md-6">
               <Label for="requisitante">Total de Proventos</Label>
-              <input class="form-control" id="totalprov01" type="number" value= " " placeholder="O total de proventos é : " disabled>
+              <input class="form-control" id="totalprov01" type="number" value= " " placeholder="Total de proventos é: " disabled>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-md-10">
+              <Label for="requisitante">Dê sempre três cliques ou mais para validar o cálculo</Label>
+               <button type="button" class="btn btn-success" id="button_acao" value="calcular" title="Dê sempre três cliques ou mais para validar o cálculo" onclick="calc()">
+                 Calcular
+               </button>
             </div>
           </div>
 
-           
-            <button type="button" class="btn btn-success" id="button_acao" value="calcular" onclick="calc()">
-              Calcular
-            </button>
-            <Label for="requisitante">Dê sempre três ou mais cliques para validar o cálculo</Label>
-         
+
           </div>
           <div class="row">
             <div class="form-group col-md-3">
@@ -246,13 +149,13 @@ var calc = function(){
               <input class="form-control" id="totalajuda01" type="number" value= " " disabled>
             </div>
             <div class="form-group col-md-3">
-              <Label for="requisitante">Seguro Desemprego</Label>
+              <Label for="requisitante">Seguro desemprego</Label>
               <input class="form-control" id="totalSeguro01" type="number" value= " " disabled>
             </div>
           </div>
           <div class="row">
             <div class="form-group col-md-3">
-              <Label for="requisitante">Total Líquido a Receber</Label>
+              <Label for="requisitante">Total para Receber</Label>
               <input class="form-control" id="totalrecebe01" type="number" value= " " disabled>
             </div>
           </div>
@@ -265,9 +168,8 @@ var calc = function(){
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="info">
       <div class="w-100">
         <h2 class="mb-5">Informações</h2>
-        <li class="mb-0>Os valores demonstrados acima, são estimados e poderão sofrer variações.</li>
-        <li class="mb-0">Colaboradores aposentados não receberão a parcela do seguro desemprego.</li>
-	<li class="mb-0">Maiores informações podem ser obtidas contatando as áreas de Remuneração e Folha de Pagamento através dos ramais 4212, 4216, 4221 e 4220.</li>
+        <p>Beneficiários de programas como aposentadoria, aqueles já recebem seguro desemprego, não tem direito ao benefício do seguro desemprego simulado.</p>
+        <p class="mb-0">Maiores informações podem ser obtidas contatando as áreas de Remuneração e Folha de Pagamento atraves dos ramais 4212, 4216, 4221 e 4220.</p>
       </div>
     </section>
 
