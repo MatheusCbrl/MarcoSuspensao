@@ -214,7 +214,7 @@ var calc = function(){
           <div class="row">
             <div class="form-group col-md-3">
               <Label for="requisitante" >Empresa<span class="fs-color-danger">*</span></Label>
-              <select name="empresa" id="empresa01" title="Escolha a empresa que trabalha." class="form-control">
+              <select name="empresa" id="empresa01" title="Escolha a empresa que trabalha" class="form-control">
                 <optgroup label="selecione sua Empresa">
                   <option value="1045" id="ins1">Marcopolo</option>
                   <option value="1104.93" id="ins2">Marcopolo Ciferal</option>
@@ -224,11 +224,11 @@ var calc = function(){
             </div>
             <div class="form-group col-md-3">
               <Label for="requisitante">Salário Atual<span class="fs-color-danger">*</span></Label>
-              <input type="number"  id="sal" title="Aqui deve somar ao seu salário o adicional noturno e adicional por tempo de trabalho se tiverem." class="form-control"/>
+              <input type="number"  id="sal" title="Aqui deve somar ao seu salário o adicional noturno e adicional por tempo de trabalho se tiverem" class="form-control"/>
             </div>
             <div class="form-group col-md-4">
-              <Label for="requisitante" title="Selecione apenas se tiver">Adicional<span class="fs-color-danger">*</span></Label>
-              <select name="adicional" id="adicional01" class="form-control">
+              <Label for="requisitante" >Adicional<span class="fs-color-danger">*</span></Label>
+              <select name="adicional" id="adicional01" title="Selecione apenas se tiver" class="form-control">
                 <optgroup label="Não se Aplica">
                   <option value="1">Sem referência</option>
                 </optgroup>
@@ -249,7 +249,7 @@ var calc = function(){
               <input class="form-control" id="totalprov01" type="number" value= " " placeholder="O total de proventos é : " disabled>
             </div>
           </div>
-            <button type="button" class="btn btn-success" id="button_acao" value="calcular" title="Dê sempre três ou mais cliques para validar o cálculo." onclick="calc()">
+            <button type="button" class="btn btn-success" id="button_acao" value="calcular" title="Dê sempre três ou mais cliques para validar o cálculo" onclick="calc()">
               Calcular
             </button>
           </div>
