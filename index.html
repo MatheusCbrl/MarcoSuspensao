@@ -224,7 +224,7 @@ var calc = function(){
             </div>
             <div class="form-group col-md-4">
               <Label for="requisitante">Salário Atual<span class="fs-color-danger">*</span></Label>
-              <input type="number"  id="sal" title="Aqui deve somar ao seu salário o adicional noturno e adicional por tempo de trabalho se tiverem" class="form-control"/>
+              <input type="number"  id="sal" title="Informe aqui seu salário base atual" class="form-control"/>
             </div>
           </div>
           <div class="row">
@@ -233,6 +233,7 @@ var calc = function(){
               <input class="form-control" id="totalprov01" type="number" value= " " placeholder="O total de proventos é : " disabled>
             </div>
           </div>
+           <Label for="requisitante">Dê sempre três ou mais cliques para validar o cálculo</Label>
             <button type="button" class="btn btn-success" id="button_acao" value="calcular" title="Dê sempre três ou mais cliques para validar o cálculo" onclick="calc()">
               Calcular
             </button>
