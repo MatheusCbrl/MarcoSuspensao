@@ -23,16 +23,30 @@
 
 </head>
 <script type="text/javascript">
-var calc = function(){
-	var sal = document.getElementById("sal").value; // pegamos o valor que digitamos no input
-	var inss = (8/100) * sal; // calculamos o desconto do inss
-	var ir_init = sal - inss; // aqui é o nosso salario já com o desconto do inss
+  var calc = function(){
+  var sal = document.getElementById("sal").value; // pegamos o valor que digitamos no input
+  var ir_init = sal - inss; // aqui é o nosso salario já com o desconto do inss
   //pega valor salário proventos;
+  var insa_val = 1;
   var total_sal = document.getElementById("totalprov01").value;
   var total_Seguro = document.getElementById("totalSeguro01").value;
 
-
-  if(sal < 1599.61){
+  if(sal <= 1045 ){
+    var y = sal *(100/100);
+    document.getElementById("totalprov01").value = y.toFixed(2);
+    var to = total_sal
+    var j = (30/100) * total_sal;
+    document.getElementById("totalajuda01").value = j.toFixed(2);
+    var w = total_Seguro *(100/100);
+    var l = j + w;
+    document.getElementById("totalrecebe01").value = l.toFixed(2);
+    var base = (100/100) * 1045;
+    var novo = base - j;
+    document.getElementById("totalSeguro01").value = novo.toFixed(2);
+    var y = novo + total_ajuda;
+    document.getElementById("totalrecebe01").value = y.toFixed(2);
+  }
+  if(sal >= 1045.01 && sal <= 1599.60){
     var x = (80/100) * sal;
     var y = x *(70/100)
     document.getElementById("totalSeguro01").value = y.toFixed(2);
@@ -51,7 +65,7 @@ var calc = function(){
     document.getElementById("totalSeguro01").value = z.toFixed(2);
 	}
 
-  if(sal >= 1){
+  if(insa_val == 1){
     var y = sal *(100/100);
     document.getElementById("totalprov01").value = y.toFixed(2);
     var to = total_sal
@@ -60,7 +74,6 @@ var calc = function(){
     var w = total_Seguro *(100/100);
     var l = j + w;
     document.getElementById("totalrecebe01").value = l.toFixed(2);
-
 	}
 
 };
