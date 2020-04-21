@@ -23,13 +23,15 @@
 
 </head>
 <script type="text/javascript">
-  var calc = function(){
-  var sal = document.getElementById("sal").value; // pegamos o valor que digitamos no input
-  var ir_init = sal - inss; // aqui é o nosso salario já com o desconto do inss
+var calc = function(){
+	var sal = document.getElementById("sal").value; // pegamos o valor que digitamos no input
+	var inss = (8/100) * sal; // calculamos o desconto do inss
+	var ir_init = sal - inss; // aqui é o nosso salario já com o desconto do inss
   //pega valor salário proventos;
   var insa_val = 1;
   var total_sal = document.getElementById("totalprov01").value;
   var total_Seguro = document.getElementById("totalSeguro01").value;
+  var total_ajuda = document.getElementById("totalajuda01").value;
 
   if(sal <= 1045 ){
     var y = sal *(100/100);
