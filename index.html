@@ -212,7 +212,7 @@ var calc = function(){
         <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
           <form onsubmit="calc();">
           <div class="row">
-            <div class="form-group col-md-3">
+            <div class="form-group col-md-4">
               <Label for="requisitante" >Empresa<span class="fs-color-danger">*</span></Label>
               <select name="empresa" id="empresa01" title="Escolha a empresa que trabalha" class="form-control">
                 <optgroup label="selecione sua Empresa">
@@ -225,22 +225,6 @@ var calc = function(){
             <div class="form-group col-md-4">
               <Label for="requisitante">Salário Atual<span class="fs-color-danger">*</span></Label>
               <input type="number"  id="sal" title="Aqui deve somar ao seu salário o adicional noturno e adicional por tempo de trabalho se tiverem" class="form-control"/>
-            </div>
-            <div class="form-group col-md-4">
-              <Label for="requisitante" >Adicional<span class="fs-color-danger">*</span></Label>
-              <select name="adicional" id="adicional01" title="Selecione apenas se tiver" class="form-control">
-                <optgroup label="Não se Aplica">
-                  <option value="1">Sem referência</option>
-                </optgroup>
-                <optgroup label="Insalubridade">
-                  <option value="0.2" id="ins1">20%</option>
-                  <option value="0.4" id="ins2">40%</option>
-                </optgroup>
-                <optgroup label="Periculosidade">
-                  <option value="0.3" id="per1">30%</option>
-
-                </optgroup>
-              </select>
             </div>
           </div>
           <div class="row">
