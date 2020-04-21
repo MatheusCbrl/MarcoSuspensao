@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Suspensão</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/resume.min.css" rel="stylesheet">
+
+</head>
+<script type="text/javascript">
+var calc = function(){
+	var sal = document.getElementById("sal").value; // pegamos o valor que digitamos no input
+	var inss = (8/100) * sal; // calculamos o desconto do inss
+	var ir_init = sal - inss; // aqui é o nosso salario já com o desconto do inss
+  //pega valor empresa01;
+  var i = document.getElementById("empresa01");
+  var empresa_val = i.options[i.selectedIndex].value;
+  //pega valor adicional salário;
+  var e = document.getElementById("adicional01");
+  var insa_val = e.options[e.selectedIndex].value;
+  //pega valor salário proventos;
+  var total_sal = document.getElementById("totalprov01").value;
+  var total_Seguro = document.getElementById("totalSeguro01").value;
+
+
+  if(sal < 1599.61){
+    var x = (80/100) * sal;
+    var y = x *(70/100)
+    document.getElementById("totalSeguro01").value = y.toFixed(2);
+  }
+
+  if(sal >= 1599.61 && sal <= 2666.29){
+    var dim = sal - 1599.61
+    var x = (50/100) * dim;
+    var y = 1279.69 *(100/100);
+    var z = x + y;
+    var total = z *(70/100)
+    document.getElementById("totalSeguro01").value = total.toFixed(2);
+  }
+  if(sal >= 2666.29 ){
+    var z = 1813.03 * (70/100);
+    document.getElementById("totalSeguro01").value = z.toFixed(2);
+	}
+
+  if(insa_val == 1){
+    var y = sal *(100/100);
+    document.getElementById("totalprov01").value = y.toFixed(2);
+    var to = total_sal
+    var j = (30/100) * total_sal;
+    document.getElementById("totalajuda01").value = j.toFixed(2);
+    var w = total_Seguro *(100/100);
+    var l = j + w;
+    document.getElementById("totalrecebe01").value = l.toFixed(2);
+
+	}
+
+  if(insa_val == 0.3){
+    var x = (30/100) * sal;
+    var y = sal *(100/100);
+    var z = x + y;
+    document.getElementById("totalprov01").value = z.toFixed(2);
+    var to = total_sal
+    var j = (30/100) * total_sal;
+    document.getElementById("totalajuda01").value = j.toFixed(2);
+    var w = total_Seguro *(100/100);
+    var l = j + w;
+    document.getElementById("totalrecebe01").value = l.toFixed(2);
+
+	}
+
+  if(insa_val == 0.2 && empresa_val == 1045 ){
+    var x = (20/100) * empresa_val;
+    var y = sal *(100/100);
+    var z = x + y;
+    document.getElementById("totalprov01").value = z.toFixed(2);
+    var j = (30/100) * z;
+    document.getElementById("totalajuda01").value = j.toFixed(2);
+    var w = total_Seguro *(100/100);
+    var l = j + w;
+    document.getElementById("totalrecebe01").value = l.toFixed(2);
+
+  }
+  if(insa_val == 0.4 && empresa_val == 1045 ){
+    var x = (40/100) * empresa_val;
+    var y = sal *(100/100);
+    var z = x + y;
+    document.getElementById("totalprov01").value = z.toFixed(2);
+    var j = (30/100) * z;
+    document.getElementById("totalajuda01").value = j.toFixed(2);
+    var w = total_Seguro *(100/100);
+    var l = j + w;
+    document.getElementById("totalrecebe01").value = l.toFixed(2);
+  }
+
+  if(insa_val == 0.2 && empresa_val == 1104.93 ){
+    var x = (20/100) * empresa_val;
+    var y = sal *(100/100);
+    var z = x + y;
+    document.getElementById("totalprov01").value = z.toFixed(2);
+    var j = (30/100) * z;
+    document.getElementById("totalajuda01").value = j.toFixed(2);
+    var w = total_Seguro *(100/100);
+    var l = j + w;
+    document.getElementById("totalrecebe01").value = l.toFixed(2);
+  }
+  if(insa_val == 0.4 && empresa_val == 1104.93 ){
+    var x = (40/100) * empresa_val;
+    var y = sal *(100/100);
+    var z = x + y;
+    document.getElementById("totalprov01").value = z.toFixed(2);
+    var j = (30/100) * z;
+    document.getElementById("totalajuda01").value = j.toFixed(2);
+    var w = total_Seguro *(100/100);
+    var l = j + w;
+    document.getElementById("totalrecebe01").value = l.toFixed(2);
+  }
+
+  if(insa_val == 0.2 && empresa_val == 1068.85 ){
+    var x = (20/100) * empresa_val;
+    var y = sal *(100/100);
+    var z = x + y;
+    document.getElementById("totalprov01").value = z.toFixed(2);
+    var j = (30/100) * z;
+    document.getElementById("totalajuda01").value = j.toFixed(2);
+    var w = total_Seguro *(100/100);
+    var l = j + w;
+    document.getElementById("totalrecebe01").value = l.toFixed(2);
+  }
+  if(insa_val == 0.4 && empresa_val == 1068.85 ){
+    var x = (40/100) * empresa_val;
+    var y = sal *(100/100);
+    var z = x + y;
+    document.getElementById("totalprov01").value = z.toFixed(2);
+    var j = (30/100) * z;
+    document.getElementById("totalajuda01").value = j.toFixed(2);
+    var w = total_Seguro *(100/100);
+    var l = j + w;
+    document.getElementById("totalrecebe01").value = l.toFixed(2);
+  }
+
+};
+
+</script>
+
+<body id="page-top">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">
+      <span class="d-block d-lg-none">Simulador Suspensão </span>
+      <span class="d-none d-lg-block">
+        <img class="img-fluid img-logo mx-auto mb-3" src="img/calculator.png" alt="">
+      </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#sobre">Sobre</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#calculo">Cálculo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#info">Informações</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container-fluid p-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="sobre">
+      <div class="w-100">
+        <h1 class="mb-0">Simulador
+          <span class="text-primary">Suspensão</span>
+        </h1>
+        <div class="subheading mb-5">SIMULADOR DE SUSPENSÃO DO CONTRATO DE TRABALHO ·
+          <a href="mailto:teste@emarcopolo.com.br">teste@marcopolo.com.br</a>
+        </div>
+        <li  class="lead mb-2"> Informe seu salário para obter a simulaçao dos rendimentos líquidos.</li>
+        <div class="social-icons">
+          <a href="#">
+            <i class="fab "><img class="img-fluid img-bus mx-auto mb-3" src="img/bus.png" alt=""></i>
+          </a>
+      </div>
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="calculo">
+      <div class="w-100">
+        <h2 class="mb-3">Suspensão</h2>
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <form onsubmit="calc();">
+          <div class="row">
+            <div class="form-group col-md-3">
+              <Label for="requisitante">Empresa<span class="fs-color-danger">*</span></Label>
+              <select name="empresa" id="empresa01" class="form-control">
+                <optgroup label="selecione sua Empresa">
+                  <option value="1045" id="ins1">Marcopolo</option>
+                  <option value="1104.93" id="ins2">Marcopolo Ciferal</option>
+                  <option value="1068.85" id="ins2">Marcopolo São Mateus</option>
+                </optgroup>
+              </select>
+            </div>
+            <div class="form-group col-md-3">
+              <Label for="requisitante">Salário Atual<abbr title="Aqui deve somar ao seu salário o adicional noturno e adicional por tempo de trabalho se tiverem.">*</abbr></Label>
+              <input type="number"  id="sal" class="form-control"/>
+            </div>
+            <div class="form-group col-md-3">
+              <Label for="requisitante">Adicional<span class="fs-color-danger">*</span></Label>
+              <select name="adicional" id="adicional01" class="form-control">
+                <optgroup label="Não se Aplica">
+                  <option value="1">Sem referência</option>
+                </optgroup>
+                <optgroup label="Insalubridade">
+                  <option value="0.2" id="ins1">20%</option>
+                  <option value="0.4" id="ins2">40%</option>
+                </optgroup>
+                <optgroup label="Periculosidade">
+                  <option value="0.3" id="per1">30%</option>
+
+                </optgroup>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-md-5">
+              <Label for="requisitante">Total de proventos</Label>
+              <input class="form-control" id="totalprov01" type="number" value= " " placeholder="O total de proventos é : " disabled>
+            </div>
+          </div>
+
+            <button type="button" class="btn btn-success" id="button_acao" value="calcular" onclick="calc()">
+              Calcular
+            </button>
+            <Label for="calcs"><abbr title="Dê sempre dois cliques para validar o cálculo.">*</abbr></Label>
+          </div>
+          <div class="row">
+            <div class="form-group col-md-3">
+              <Label for="requisitante">Ajuda Compensatória</Label>
+              <input class="form-control" id="totalajuda01" type="number" value= " " disabled>
+            </div>
+            <div class="form-group col-md-3">
+              <Label for="requisitante">Seguro desemprego</Label>
+              <input class="form-control" id="totalSeguro01" type="number" value= " " disabled>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-md-3">
+              <Label for="requisitante">Total para Receber</Label>
+              <input class="form-control" id="totalrecebe01" type="number" value= " " disabled>
+            </div>
+          </div>
+          <input class="btn btn-danger" type="reset" value="Limpar">
+        </form>
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="info">
+      <div class="w-100">
+        <h2 class="mb-5">Informações</h2>
+        <p>Beneficiários de programas como aposentadoria, aqueles já recebem seguro desemprego, não tem direito ao benefício do seguro desemprego simulado.</p>
+        <p class="mb-0">Maiores informações podem ser obtidas contatando as áreas de Remuneração e Folha de Pagamento atraves dos ramais 4212, 4216, 4221 e 4220.</p>
+      </div>
+    </section>
+
+    <hr class="m-0">
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/resume.min.js"></script>
+
+</body>
+
+</html>
