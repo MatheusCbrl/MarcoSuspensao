@@ -32,8 +32,14 @@ var calc = function(){
   var total_sal = document.getElementById("totalprov01").value;
   var total_Seguro = document.getElementById("totalSeguro01").value;
   var total_ajuda = document.getElementById("totalajuda01").value;
-
-  if(sal <= 1045 ){
+  
+  if(sal <= 3135){
+    var x = 100 *(100/100)
+    document.getElementById("valeRancho").value = x.toFixed(2);
+  } else {
+    document.getElementById("valeRancho").value = " ";
+  }
+  if(sal <= 1216 ){
     var y = sal *(100/100);
     document.getElementById("totalprov01").value = y.toFixed(2);
     var to = total_sal
@@ -78,12 +84,7 @@ var calc = function(){
     document.getElementById("totalrecebe01").value = l.toFixed(2);
 	}
 
-  if(sal <= 3135){
-    var x = 100 *(100/100)
-    document.getElementById("valeRancho").value = x.toFixed(2);
-  } else {
-    document.getElementById("valeRancho").value = " ";
-  }
+
 };
 
 </script>
@@ -133,7 +134,7 @@ var calc = function(){
         </h1>
         <div class="subheading mb-5">SIMULADOR DE BENEFÍCIO PARA SUSPENSÃO DO CONTRATO DE TRABALHO CONFORME MP 936/20
         </div>
-        <li  class="lead mb-2"> Informe abaixo o seu salário base atual (valor hora X 220) para obter a simulação dos rendimentos líquidos.</li>
+        <li  class="lead mb-2"> Informe o seu salário base atual (valor hora X 220) para obter a simulação dos rendimentos líquidos.</li>
 	<!--
         <div class="social-icons">
           <a href="#">
