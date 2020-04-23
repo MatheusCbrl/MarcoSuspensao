@@ -62,3 +62,8 @@ Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework 
 ## Copyright and License
 
 Copyright 2013-2019 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-resume/blob/gh-pages/LICENSE) license.
+
+## Netlify Deploy
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/26bcc30d-dbf5-41e3-81f7-72c2f1a6bf96/deploy-status)](https://app.netlify.com/sites/marcopoloreducao/deploys)
+
